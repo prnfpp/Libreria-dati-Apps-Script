@@ -18,7 +18,8 @@ la usano come libreria e non chiamano mai le API direttamente.
 | `Log.gs` | Foglio `log`, oscuramento dei token nei messaggi |
 | `Api.gs` | Funzioni pubbliche |
 | `Connector_meta_ads.gs` | Meta Ads: account, metriche Insights, utenti assegnati |
-| `tests/` | Test locali con servizi Apps Script simulati (`node tests/run.js`, `node tests/meta.js`) |
+| `Connector_linkedin_ads.gs` | LinkedIn Ads: account, metriche adAnalytics, utenti dell'account |
+| `tests/` | Test locali con servizi Apps Script simulati (`node tests/run.js`, `node tests/meta.js`, `node tests/linkedin.js`) |
 
 ## Installazione sull'account Google
 

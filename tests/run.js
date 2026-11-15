@@ -45,7 +45,7 @@ const today = ctx.dl_today_ ? null : null;
 ctx.setup(); ctx.setup();
 assert.deepStrictEqual(files[props.DL_CONFIG_SPREADSHEET_ID].sheets.map(s => s.name).sort(), ['accessi', 'campagne', 'config', 'impostazioni', 'log', 'mappa_metriche', 'stato']);
 assert(objs(sheet('config')).length === 0 && sheet('config').d[0].includes('meta_ads_account'));
-assert.strictEqual(objs(sheet('mappa_metriche')).length, 5, 'mappatura non duplicata al secondo setup');
+assert.strictEqual(objs(sheet('mappa_metriche')).filter(m => m.piattaforma === 'meta_ads').length, 5, 'mappatura non duplicata al secondo setup');
 props.DL_TOKEN_meta = 'meta-secret-token';
 const T = vm.runInContext('dl_today_()', ctx), add = (d, n) => ctx.dl_addDays_(d, n);
 const hdr = sheet('config').d[0];
